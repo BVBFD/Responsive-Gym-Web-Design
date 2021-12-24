@@ -6,23 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Gym Web Design using video</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
+    <!-- Header Part Start -->
+    <header class="header">
+      <div class="logo">Boxing Club</div>
+      <div class="menuIcon" onclick="menuToggleBtnClick();">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </div>
+    </header>
+    <!-- Menu sidebar start -->
     <div class="menu">
       <ul>
-        <li><a href="#" onclick="toggleMenu();">Home</a></li>
-        <li><a href="#" onclick="toggleMenu();">About</a></li>
-        <li><a href="#" onclick="toggleMenu();">Training</a></li>
-        <li><a href="#" onclick="toggleMenu();">Team</a></li>
-        <li><a href="#" onclick="toggleMenu();">Contact</a></li>
+        <li onclick="menuToggleBtnClick();"><a href="#home">Home</a></li>
+        <li onclick="menuToggleBtnClick();"><a href="#about">About</a></li>
+        <li onclick="menuToggleBtnClick();">
+          <a href="#training">Training</a>
+        </li>
+        <li onclick="menuToggleBtnClick();"><a href="#team">Team</a></li>
+        <li onclick="menuToggleBtnClick();"><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    <section class="banner">
-      <header>
-        <h2 class="logo">Your Logo</h2>
-        <div class="toggle" onclick="toggleMenu();"></div>
-      </header>
-      <video src="bgVideo.mp4" muted loop autoplay></video>
+    <!-- Menu sidebar end -->
+    <!-- Header Part End -->
+    <!-- Home Part Start -->
+    <section class="home" id="home">
+      <video src="./videos/bgVideo.mp4" muted loop autoplay></video>
       <div class="overlay"></div>
       <div class="text">
         <h2>Be Stronger</h2>
@@ -35,28 +50,10 @@
         </p>
         <a href="#">Join us</a>
       </div>
-      <ul class="sci">
-        <li>
-          <a href="#"><img src="facebook.png" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="twitter.png" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="instagram.png" alt="" /></a>
-        </li>
-      </ul>
     </section>
-    <script type="text/javascript">
-      const toggleMenu = () => {
-        let menuToggle = document.querySelector(".toggle");
-        let banner = document.querySelector(".banner");
-        console.log(menuToggle);
-        menuToggle.addEventListener("click", () => {
-          menuToggle.classList.toggle("active");
-          banner.classList.toggle("active");
-        });
-      };
-    </script>
+    <!-- Home Part End-->
+    <section class="about" id="about">
+      <header class="heading">hi</header>
+    </section>
   </body>
 </html>

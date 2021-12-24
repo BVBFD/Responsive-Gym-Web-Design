@@ -1,64 +1,115 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ddd;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
 }
 
 section {
-  position: absolute;
-  right: 0;
+  position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background: #111;
-  transition: 0.5s;
 }
 
-.banner.active {
-  right: 300px;
-}
-
-header {
+.header {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  padding: 40px 100px;
+  color: #000;
+  background: linear-gradient(to left, #8ff8f8, #ecadfc);
+  padding: 0.4rem 0.5rem;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  font-size: 2rem;
+  z-index: 99;
+  /* mix-blend-mode: screen; */
+  opacity: 0.95;
+}
+
+.header .logo {
+  font-weight: 800;
+}
+
+.header .menuIcon .fa-bars {
+  display: inline-block;
+}
+
+.header .menuIcon .fa-times {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 17rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  z-index: 1000;
+  background: linear-gradient(to bottom, #8ff8f8, #ecadfc);
+  z-index: 999;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  opacity: 0.95;
 }
 
-header .logo {
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
+.menu ul li {
+  padding-top: 0.5rem;
 }
 
-.toggle {
+.menu ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #111;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+}
+
+.menu.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menuIcon.active {
   position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
+  right: 17rem;
 }
 
-.toggle.active {
-  background: url(close.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
+.menuIcon.active {
+  z-index: 999;
 }
 
-section video {
+.menuIcon.active .fa-bars {
+  display: none;
+}
+
+.menuIcon.active .fa-times {
+  display: flex;
+}
+
+/* Home Part */
+.home video {
   position: absolute;
   top: 0;
   left: 0;
@@ -67,7 +118,7 @@ section video {
   object-fit: cover;
 }
 
-.overlay {
+.home .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -77,37 +128,28 @@ section video {
   mix-blend-mode: overlay;
 }
 
-.text {
-  position: relative;
-  z-index: 10;
-}
-
-.text h2 {
-  font-size: 6em;
-  font-weight: 800;
+.home .text {
+  position: absolute;
+  top: 15rem;
+  left: 5rem;
   color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
+  z-index: 10;
+  mix-blend-mode: difference;
 }
 
-.text h3 {
+.home .text h2 {
+  font-size: 6em;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+.home .text h3 {
   font-size: 4em;
   font-weight: 700;
-  color: #fff;
   line-height: 1em;
-  text-transform: uppercase;
 }
 
-.text p {
-  position: relative;
-  font-size: 1.1em;
-  margin: 20px 0;
-  font-weight: 400;
-  max-width: 700px;
-  color: #fff;
-}
-
-.text a {
+.home .text a {
   display: inline-block;
   font-size: 1em;
   background: #fff;
@@ -120,65 +162,23 @@ section video {
   letter-spacing: 2px;
 }
 
-.sci {
-  position: absolute;
-  z-index: 10;
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.home .text p {
+  position: relative;
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
 }
 
-.sci li {
-  list-style: none;
-}
-
-.sci li a {
+.home .text a {
   display: inline-block;
-  margin-right: 20px;
-  filter: invert(1);
-  transform: scale(0.5);
-}
-
-.menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 1em;
   background: #fff;
-}
-
-.menu ul {
-  position: relative;
-}
-
-.menu ul li {
-  position: relative;
-  list-style: none;
-  text-align: center;
-}
-
-.menu ul li a {
+  padding: 10px 30px;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 24px;
+  font-weight: 500;
+  margin-top: 10px;
   color: #111;
-}
-
-@media screen and (max-width: 991px) {
-  section,
-  section header {
-    padding: 40px;
-  }
-
-  .text h2 {
-    font-size: 3em;
-  }
-
-  .text h3 {
-    font-size: 2em;
-  }
+  letter-spacing: 2px;
 }
