@@ -6,8 +6,3 @@ const menuToggleBtnClick = () => {
   menu.classList.toggle("active");
   menuIcon.classList.toggle("active");
 };
-
-// menuToggleBtn.addEventListener("click", () => {
-//   menu.classList.toggle("active");
-//   menuIcon.classList.toggle("active");
-// });

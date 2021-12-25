@@ -29,7 +29,7 @@ html::-webkit-scrollbar-track {
 section {
   position: relative;
   width: 100%;
-  min-height: 120vh;
+  min-height: 110vh;
   background: #000;
   color: #fff;
 }
@@ -206,7 +206,7 @@ section {
 
 .about .explainBox {
   position: absolute;
-  top: 6%;
+  top: 10%;
   left: 5%;
   display: flex;
   flex-wrap: wrap;
@@ -278,16 +278,15 @@ section {
 
 .training .heading {
   position: relative;
-  top: -5rem;
   width: 100%;
-  height: 15vh;
+  height: 20vh;
   text-align: center;
 }
 
 .training .heading::before {
   content: "";
   position: absolute;
-  bottom: 1rem;
+  bottom: 3rem;
   left: 33%;
   height: 4px;
   width: 33%;
@@ -303,13 +302,13 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
   gap: 1rem;
-  padding: 0 2rem;
+  height: 80vh;
 }
 
 .training .trainingIntroBox .trainingIntroBoxDiv {
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -383,16 +382,15 @@ section {
 
 .trainer .heading {
   position: relative;
-  top: -5rem;
   width: 100%;
-  height: 15vh;
+  height: 20vh;
   text-align: center;
 }
 
 .trainer .heading::before {
   content: "";
   position: absolute;
-  bottom: 1rem;
+  bottom: 3rem;
   left: 33%;
   height: 4px;
   width: 33%;
@@ -406,7 +404,7 @@ section {
 
 .trainer .trainerIntroBox {
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   gap: 0 1rem;
@@ -496,3 +494,88 @@ section {
   line-height: 1.5rem;
 }
 /* Trainer Part End */
+
+/* Contact Part Start */
+.contact {
+  padding: 0 1rem;
+}
+
+.contact .heading {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  text-align: center;
+}
+
+.contact .heading::before {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 33%;
+  height: 4px;
+  width: 33%;
+  background: #f00;
+}
+
+.contact .heading h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.contact .row {
+  display: flex;
+  background: var(--black);
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  text-align: center;
+}
+
+.contact .row form h3 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+.contact .row form .inputBox {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--black);
+  border: var(--border);
+}
+
+.contact .row form .inputBox span {
+  color: #fff;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.contact .row form .inputBox input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+}
+
+.contact .row form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  background: #fff;
+}
+
+/* Contact Part End */
