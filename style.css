@@ -29,7 +29,7 @@ html::-webkit-scrollbar-track {
 section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 120vh;
   background: #000;
   color: #fff;
 }
@@ -187,7 +187,7 @@ section {
 .about div {
   display: flex;
   flex-wrap: wrap;
-  min-height: 80%;
+  min-height: 70%;
 }
 
 .about div .background1 {
@@ -206,7 +206,7 @@ section {
 
 .about .explainBox {
   position: absolute;
-  top: 10%;
+  top: 6%;
   left: 5%;
   display: flex;
   flex-wrap: wrap;
@@ -278,6 +278,7 @@ section {
 
 .training .heading {
   position: relative;
+  top: -5rem;
   width: 100%;
   height: 15vh;
   text-align: center;
@@ -382,6 +383,7 @@ section {
 
 .trainer .heading {
   position: relative;
+  top: -5rem;
   width: 100%;
   height: 15vh;
   text-align: center;
