@@ -15,29 +15,31 @@ html {
 }
 
 html::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.3rem;
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #ddd;
+  background: #fff;
 }
 
 html::-webkit-scrollbar-track {
-  background: #fff;
+  background: #000;
 }
 
 section {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  background: #000;
+  color: #fff;
 }
-
+/* Header Part Start */
 .header {
   position: absolute;
   top: 0;
   width: 100%;
-  color: #000;
-  background: linear-gradient(to left, #8ff8f8, #ecadfc);
+  color: #fff;
+  background: #000;
   padding: 0.4rem 0.5rem;
   display: flex;
   flex-direction: row;
@@ -45,7 +47,6 @@ section {
   font-size: 2rem;
   z-index: 99;
   /* mix-blend-mode: screen; */
-  opacity: 0.95;
 }
 
 .header .logo {
@@ -69,10 +70,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #8ff8f8, #ecadfc);
+  background: #fff;
   z-index: 999;
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  opacity: 0.95;
 }
 
 .menu ul li {
@@ -107,8 +107,8 @@ section {
 .menuIcon.active .fa-times {
   display: flex;
 }
-
-/* Home Part */
+/* Header Part End */
+/* Home Part Start */
 .home video {
   position: absolute;
   top: 0;
@@ -182,3 +182,91 @@ section {
   color: #111;
   letter-spacing: 2px;
 }
+/* Home Part End */
+/* About Part Start */
+.about div {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 80%;
+}
+
+.about div .background1 {
+  display: flex;
+  flex: 1 1 60%;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.about div .background2 {
+  display: flex;
+  flex: 1 1 40%;
+  background: #000;
+  min-height: 100vh;
+}
+
+.about .explainBox {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #000, #666);
+  width: 90%;
+}
+
+.about .explainBox .textBox {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 50%;
+  padding: 6rem;
+}
+
+.about .explainBox .textBox .heading {
+  position: relative;
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.about .explainBox .textBox h3 {
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about .explainBox .textBox p {
+  font-size: medium;
+}
+
+.about .explainBox .textBox .heading::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  height: 4px;
+  width: 99%;
+  background: #f00;
+}
+
+.about .explainBox .imgBox {
+  flex: 1 1 50%;
+}
+
+.about .explainBox .imgBox img {
+  width: 100%;
+}
+
+.about .explainBox a {
+  display: inline-block;
+  width: fit-content;
+  font-size: 1rem;
+  background: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 2rem;
+  color: #111;
+  letter-spacing: 2px;
+}
+/* About Part End */
