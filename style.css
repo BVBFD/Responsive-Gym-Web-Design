@@ -210,7 +210,7 @@ section {
   left: 5%;
   display: flex;
   flex-wrap: wrap;
-  background: linear-gradient(to right, #000, #666);
+  background: linear-gradient(to right, #000, #999);
   width: 90%;
   box-shadow: -3px 5px 10px #888;
 }
@@ -375,3 +375,122 @@ section {
   margin-top: 1rem;
 }
 /* Training Part End */
+/* Trainer Part Start */
+.trainer {
+  padding: 0 1rem;
+}
+
+.trainer .heading {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  text-align: center;
+}
+
+.trainer .heading::before {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 33%;
+  height: 4px;
+  width: 33%;
+  background: #f00;
+}
+
+.trainer .heading h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.trainer .trainerIntroBox {
+  width: 100%;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 0 1rem;
+}
+
+.trainer .trainerIntroBox .trainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  height: 95%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.trainer .trainerIntroBox .trainer::before {
+  position: absolute;
+  top: -45%;
+  left: 40%;
+  content: "";
+  width: 30%;
+  height: 220%;
+  background: linear-gradient(#21ffff, #ff11ff);
+  animation: animate 4s linear infinite;
+  z-index: -2;
+}
+
+.trainer .trainerIntroBox .trainer::after {
+  content: "";
+  position: absolute;
+  background: #222;
+  inset: 4px;
+  z-index: -1;
+}
+
+.trainer .trainerIntroBox .trainer:nth-child(2)::before {
+  background: linear-gradient(#ff2525, #1f1fd6);
+}
+
+.trainer .trainerIntroBox .trainer:nth-child(3)::before {
+  background: linear-gradient(#6200ff, #ff0040);
+}
+
+.trainer .trainerIntroBox .trainer:nth-child(4)::before {
+  background: linear-gradient(#fffb00, #ff5e00);
+}
+
+.trainer .trainerIntroBox .trainer:nth-child(5)::before {
+  background: linear-gradient(#00ffea, #ff0404);
+}
+
+.trainer .trainerIntroBox .trainer:nth-child(6)::before {
+  background: linear-gradient(#21ffff, #ff11ff);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.trainer .trainerIntroBox .trainer .imgBox img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.trainer .trainerIntroBox .trainer .textBox {
+  color: #fff;
+  text-align: center;
+}
+
+.trainer .trainerIntroBox .trainer .textBox h1 {
+  line-height: 3rem;
+}
+
+.trainer .trainerIntroBox .trainer .textBox h3 {
+  line-height: 2rem;
+}
+
+.trainer .trainerIntroBox .trainer .textBox p {
+  line-height: 1.5rem;
+}
+/* Trainer Part End */
