@@ -169,19 +169,6 @@ section {
   font-weight: 400;
   max-width: 700px;
 }
-
-.home .text a {
-  display: inline-block;
-  font-size: 1em;
-  background: #fff;
-  padding: 10px 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-  color: #111;
-  letter-spacing: 2px;
-}
 /* Home Part End */
 /* About Part Start */
 .about div {
@@ -424,7 +411,7 @@ section {
 
 .trainer .trainerIntroBox .trainer::before {
   position: absolute;
-  top: -45%;
+  top: -55%;
   left: 40%;
   content: "";
   width: 30%;
@@ -572,10 +559,453 @@ section {
 }
 
 .contact .row form input {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 0.2rem;
+  display: inline-block;
+  font-size: 1em;
   background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+}
+/* Contact Part End */
+
+@media screen and (max-width: 1280px) {
+  .contact .row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
-/* Contact Part End */
+@media screen and (max-width: 1024px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home .text {
+    width: 100vw;
+    font-size: 120%;
+    top: 40%;
+    left: 0;
+  }
+
+  .home .text p {
+    max-width: none;
+  }
+
+  .about .explainBox {
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    text-align: center;
+  }
+
+  .about .explainBox .textBox {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .explainBox .imgBox {
+    display: flex;
+  }
+
+  .training .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .training .heading::before {
+    bottom: 4rem;
+    width: 50%;
+    left: 25%;
+  }
+
+  .training .heading h1 {
+    font-size: 4rem;
+  }
+
+  .training .trainingIntroBox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .training .trainingIntroBox .trainingIntroBoxDiv_explain {
+    font-size: 200%;
+  }
+
+  .training
+    .trainingIntroBox
+    .trainingIntroBoxDiv
+    .trainingIntroBoxDiv_explain
+    h3 {
+    margin-top: 0;
+    display: none;
+  }
+
+  .training
+    .trainingIntroBox
+    .trainingIntroBoxDiv
+    .trainingIntroBoxDiv_explain
+    p {
+    margin-top: 0;
+    display: none;
+  }
+
+  .trainer .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .trainer .heading::before {
+    bottom: 4rem;
+    width: 50%;
+    left: 25%;
+  }
+
+  .trainer .heading h1 {
+    font-size: 4rem;
+  }
+
+  .trainer .trainerIntroBox {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+  }
+
+  .trainer .trainerIntroBox .trainer {
+    margin-bottom: 1rem;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox h3 {
+    font-size: 1.5rem;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox p {
+    display: none;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox p {
+    display: none;
+  }
+
+  .trainer .trainerIntroBox .trainer .imgBox img {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .contact {
+    min-height: fit-content;
+    padding-bottom: 5rem;
+  }
+
+  .contact .row {
+    flex-wrap: nowrap;
+  }
+
+  .contact .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact .heading::before {
+    bottom: 2rem;
+    width: 40%;
+    left: 30%;
+  }
+
+  .contact .heading h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trainer .trainerIntroBox .trainer .imgBox img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    min-height: 110vh;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home .text {
+    font-size: 60%;
+    top: 40%;
+    left: 0;
+  }
+
+  .about div {
+    flex-direction: column;
+  }
+
+  .about div .background1 {
+    display: none;
+  }
+
+  .about div .background2 {
+    display: none;
+  }
+
+  .about .explainBox {
+    top: 5%;
+    left: 5%;
+    text-align: center;
+  }
+
+  .about .explainBox .textBox {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .explainBox .imgBox {
+    display: none;
+  }
+
+  .training .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .training .heading::before {
+    bottom: 1rem;
+    width: 100%;
+    left: 0;
+  }
+
+  .training .heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .training .trainingIntroBox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .training .trainingIntroBox .trainingIntroBoxDiv_explain {
+    font-size: 100%;
+  }
+
+  .training
+    .trainingIntroBox
+    .trainingIntroBoxDiv
+    .trainingIntroBoxDiv_explain
+    h3 {
+    margin-top: 0;
+    display: none;
+  }
+
+  .training
+    .trainingIntroBox
+    .trainingIntroBoxDiv
+    .trainingIntroBoxDiv_explain
+    p {
+    margin-top: 0;
+    display: none;
+  }
+
+  .trainer .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .trainer .heading::before {
+    bottom: 1rem;
+    width: 100%;
+    left: 0;
+  }
+
+  .trainer .heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .trainer .trainerIntroBox {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox h3 {
+    font-size: 1.2rem;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox p {
+    display: none;
+  }
+
+  .trainer .trainerIntroBox .trainer .textBox p {
+    display: none;
+  }
+
+  .trainer .trainerIntroBox .trainer .imgBox img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .contact .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact .heading::before {
+    bottom: 0;
+    width: 100%;
+    left: 0;
+  }
+
+  .contact .heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact .row form {
+    flex: 1 1 45rem;
+  }
+
+  .contact .row form h3 {
+    font-size: 2.5rem;
+  }
+
+  .contact .row form .inputBox {
+    margin: 1rem 0;
+  }
+  .contact .row {
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .contact .row iframe {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    min-height: 105vh;
+  }
+
+  .about {
+    min-height: 75vh;
+  }
+
+  .menu.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .menuIcon.active {
+    right: 0;
+  }
+
+  .menu {
+    top: 3.2rem;
+    right: none;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+
+  .menu ul {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu ul li a {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  .contact .row iframe {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .about {
+    min-height: 80vh;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  section {
+    min-height: 105vh;
+  }
+
+  .about {
+    min-height: 75vh;
+  }
+
+  .about .explainBox .textBox .heading,
+  .about .explainBox .textBox h3,
+  .about .explainBox .textBox p,
+  .about .explainBox .textBox a {
+    font-size: 90%;
+  }
+
+  .training .heading h1 {
+    font-size: 2rem;
+  }
+
+  .trainer .heading h1 {
+    font-size: 2rem;
+  }
+
+  .trainer .heading::before {
+    bottom: 1.8rem;
+  }
+
+  .contact .heading h1 {
+    font-size: 2rem;
+  }
+
+  .contact .row form h3 {
+    font-size: 2rem;
+  }
+
+  .contact .row iframe {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .about {
+    min-height: 90vh;
+  }
+}
