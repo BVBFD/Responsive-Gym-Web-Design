@@ -959,17 +959,30 @@ section {
 
 @media screen and (max-width: 420px) {
   .about {
-    min-height: 80vh;
+    min-height: 57.5vh;
+  }
+
+  .training .heading {
+    height: 15vh;
+  }
+  .trainer .heading {
+    height: 15vh;
+  }
+  .contact .heading {
+    height: 10vh;
+  }
+  .contact .row {
+    margin: 1rem 0;
   }
 }
 
 @media screen and (max-width: 380px) {
   section {
-    min-height: 105vh;
+    min-height: 100vh;
   }
 
   .about {
-    min-height: 75vh;
+    min-height: 48vh;
   }
 
   .about .explainBox .textBox .heading,
@@ -977,6 +990,18 @@ section {
   .about .explainBox .textBox p,
   .about .explainBox .textBox a {
     font-size: 90%;
+  }
+
+  .training .heading {
+    height: 15vh;
+  }
+
+  .trainer .heading {
+    height: 15vh;
+  }
+
+  .contact .heading {
+    height: 10vh;
   }
 
   .training .heading h1 {
@@ -988,11 +1013,15 @@ section {
   }
 
   .trainer .heading::before {
-    bottom: 1.8rem;
+    bottom: 1rem;
   }
 
   .contact .heading h1 {
     font-size: 2rem;
+  }
+
+  .contact .row {
+    margin: 1rem 0;
   }
 
   .contact .row form h3 {
@@ -1004,8 +1033,14 @@ section {
   }
 }
 
+@media screen and (max-width: 365px) {
+  .about {
+    min-height: 50vh;
+  }
+}
+
 @media screen and (max-width: 330px) {
   .about {
-    min-height: 90vh;
+    min-height: 60vh;
   }
 }
