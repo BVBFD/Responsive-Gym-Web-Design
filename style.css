@@ -590,9 +590,10 @@ section {
 
   .home .text {
     width: 100vw;
-    font-size: 120%;
+    font-size: 140%;
     top: 40%;
     left: 0;
+    padding: 2rem;
   }
 
   .home .text p {
@@ -602,8 +603,6 @@ section {
   .about .explainBox {
     display: flex;
     flex-direction: column;
-    top: 15%;
-    left: 5%;
     text-align: center;
   }
 
@@ -758,7 +757,7 @@ section {
 
   .home .text {
     font-size: 60%;
-    top: 40%;
+    top: 30%;
     left: 0;
   }
 
@@ -932,8 +931,14 @@ section {
     min-height: 105vh;
   }
 
+  .home .text {
+    font-size: 100%;
+    top: 30%;
+    left: 0;
+  }
+
   .about {
-    min-height: 75vh;
+    min-height: 50vh;
   }
 
   .menu.active {
@@ -945,6 +950,7 @@ section {
   }
 
   .menu {
+    position: absolute;
     top: 3.2rem;
     right: none;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -970,30 +976,19 @@ section {
 
 @media screen and (max-width: 420px) {
   .about {
-    min-height: 57.5vh;
+    min-height: 60vh;
   }
 
-  .training .heading {
-    height: 15vh;
-  }
-  .trainer .heading {
-    height: 15vh;
-  }
-  .contact .heading {
-    height: 10vh;
-  }
-  .contact .row {
-    margin: 1rem 0;
+  .home .text {
+    font-size: 60%;
+    top: 30%;
+    left: 0;
   }
 }
 
 @media screen and (max-width: 380px) {
   section {
     min-height: 100vh;
-  }
-
-  .about {
-    min-height: 48vh;
   }
 
   .about .explainBox .textBox .heading,
@@ -1044,14 +1039,10 @@ section {
   }
 }
 
-@media screen and (max-width: 365px) {
-  .about {
-    min-height: 50vh;
-  }
-}
-
-@media screen and (max-width: 330px) {
-  .about {
-    min-height: 60vh;
+@media screen and (max-width: 320px) {
+  .home .text {
+    font-size: 60%;
+    top: 20%;
+    left: 0;
   }
 }
