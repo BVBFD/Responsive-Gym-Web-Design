@@ -762,6 +762,17 @@ section {
     left: 0;
   }
 
+  .about {
+    display: flex;
+    align-items: center;
+  }
+
+  .about .explainBox {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
   .about div {
     flex-direction: column;
   }
