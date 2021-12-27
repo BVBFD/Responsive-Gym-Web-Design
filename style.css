@@ -29,7 +29,6 @@ html::-webkit-scrollbar-track {
 section {
   position: relative;
   width: 100%;
-  min-height: 110vh;
   background: #000;
   color: #fff;
 }
@@ -109,6 +108,10 @@ section {
 }
 /* Header Part End */
 /* Home Part Start */
+.home {
+  min-height: 100vh;
+}
+
 .home video {
   position: absolute;
   top: 0;
